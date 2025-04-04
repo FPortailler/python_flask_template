@@ -1,0 +1,10 @@
+python-dotenv
+Flask
+flask-sse
+flask-cors
+typing_extensions
+pylint
+pylint-flask
+pre-commit
+coverage
+freezegun

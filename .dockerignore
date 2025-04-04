@@ -1,0 +1,39 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Make
+Makefile
+
+# Docker
+docker-compose.yml
+Dockerfile
+.docker
+.dockerignore
+
+# Environment
+.env
+venv/
+
+# tests
+test/
+htmlcov/
+coverage.xml
+.coverage
+
+# qa
+.pylintrc
+.pre-commit-config.yaml
+
+# generated
+logs/
+mocks/
+
+# IDE files
+.idea/
+.vscode/
+
+# documentation
+ReadMe.md
+Changelog.md

@@ -1,0 +1,10 @@
+.idea
+venv
+.env
+logs
+htmlcov/
+coverage.xml
+.scannerwork/
+.coverage
+keyword_files/
+/mocks/datasets/
