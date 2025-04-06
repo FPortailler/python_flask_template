@@ -1,10 +1,11 @@
-python-dotenv
+black
+coverage
 Flask
-flask-sse
 flask-cors
-typing_extensions
+flask-sse
+freezegun
+pre-commit
 pylint
 pylint-flask
-pre-commit
-coverage
-freezegun
+python-dotenv
+typing_extensions

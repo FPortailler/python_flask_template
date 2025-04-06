@@ -1,6 +1,35 @@
+# useful links: https://pre-commit.com/hooks.html
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-docstring-first
+      - id: requirements-txt-fixer
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.10.0
+    hooks:
+      - id: python-check-blanket-noqa
+      - id: python-check-mock-methods
+      - id: python-no-eval
+  - repo: https://github.com/asottile/dead
+    rev: v2.1.0
+    hooks:
+      - id: dead
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.1.0
+    hooks:
+      - id: add-trailing-comma
   - repo: local
     hooks:
+      - id: format
+        name: format
+        entry: make format
+        language: system
+        types: [ python ]
+        require_serial: true
       - id: pylint
         name: pylint
         entry: pylint

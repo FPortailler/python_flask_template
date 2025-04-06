@@ -33,7 +33,12 @@ tests:
 lint:
 	@echo "Linting the code..."
 	source ./venv/bin/activate && \
-	python -m pylint --reports=True ./app ./test
+	python -m pylint --reports=True ./app ./test \
+
+format:
+	@echo "Running black..."
+	source ./venv/bin/activate && \
+	black --config black.config.toml ./app ./test
 
 pre-commit:
 	@echo "Running pre-commit hooks..."

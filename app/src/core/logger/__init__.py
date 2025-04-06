@@ -22,7 +22,7 @@ class __BaseLogger:
         Path(_LOG_DIR).mkdir(parents=True, exist_ok=True)
         fh = logging.FileHandler(f"{_LOG_DIR}/{log_file}")
         fh.setLevel(logging.DEBUG)
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
         fh.setFormatter(formatter)
         self.logger.addHandler(fh)
 
@@ -35,7 +35,7 @@ class __BaseLogger:
             pass
         fh = logging.FileHandler(f"logs/{log_file}")
         fh.setLevel(logging.DEBUG)
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
         fh.setFormatter(formatter)
         for handler in self.logger.handlers[:]:
             self.logger.removeHandler(handler)
@@ -55,7 +55,7 @@ class __BaseLogger:
         if args:
             _msg = f"{msg}, {args}"
         self.logger.info(_msg)
-        print(f"INFO: {_msg}")
+        print(f"{_grey}INFO: {_msg}{_reset}")
 
     def warning(self, msg, *args):
         self.check_file_or_create()

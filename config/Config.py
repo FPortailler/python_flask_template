@@ -10,7 +10,8 @@ class Env(Enum):
 
 
 class Config:
-    """ Project configuration """
+    """Project configuration"""
+
     ENV: Env
     HOST: str
     PORT: str
@@ -18,10 +19,10 @@ class Config:
     # Add any project configuration here
 
     def __init__(
-            self,
-            env: Env = Env(os.getenv("ENV", "dev")),
-            host: str = os.getenv("HOST", "0.0.0.0"),
-            port: str = os.getenv("PORT", "5001"),
+        self,
+        env: Env = Env(os.getenv("ENV", "dev")),
+        host: str = os.getenv("HOST", "0.0.0.0"),
+        port: str = os.getenv("PORT", "5001"),
     ):
         self.ENV = env
         self.HOST = host

@@ -21,12 +21,12 @@ def create_app(env: Env):
     app.register_blueprint(api)
 
     @app.errorhandler(404)
-    def not_found_error(error):
+    def not_found_error(error):  # dead: disable
         print(error)
         return {"error": "Resource not found"}, 404
 
     @app.errorhandler(500)
-    def internal_error(error):
+    def internal_error(error):  # dead: disable
         print(error)
         return {"error": "Internal server error"}, 500
 

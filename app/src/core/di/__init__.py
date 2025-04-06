@@ -10,4 +10,4 @@ class DI:
         pass
 
 
-di = DI()
+di = DI()  # dead: disable
