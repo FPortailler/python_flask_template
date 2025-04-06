@@ -3,10 +3,20 @@ setup-python-env:
 	cp .env.dist .env
 	python3 -m venv ./venv/
 
-install:
+install-dev:
 	@echo "Installing dependencies..."
 	source ./venv/bin/activate && \
-	python -m pip install -r requirements.txt
+	python -m pip install -r requirements/dev.txt
+
+install-qa:
+	@echo "Installing dependencies..."
+	source ./venv/bin/activate && \
+	python -m pip install -r requirements/qa.txt
+
+install-prod:
+	@echo "Installing dependencies..."
+	source ./venv/bin/activate && \
+	python -m pip install -r requirements/prod.txt
 
 freeze:
 	@echo "Freezing packages..."

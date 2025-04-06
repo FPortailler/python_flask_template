@@ -1,0 +1,6 @@
+-r common.txt
+black
+coverage
+freezegun
+pylint
+pylint-flask

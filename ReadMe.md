@@ -11,10 +11,16 @@ It uses Make and Docker for the configuration and run.
 
 ``` bash
 make setup-python-env
-make install
+make install-dev
+
+# qa
+# make install-qa
+
+# prod
+# make install-prod
 ```
 
-Note: if the dependencies versions are not frozen, you can use:
+Note: if the dependencies versions are not frozen (you'll have to organize them by env next), you can use:
 
 ```bash
 make freeze
@@ -47,6 +53,9 @@ Commands:
 ``` bash
 # run tests
 make tests
+
+#v run formatter
+make format
 
 # run linter
 make lint
