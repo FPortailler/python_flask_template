@@ -24,7 +24,7 @@ freeze:
 	pip freeze > requirements.txt
 
 
-docker:
+run:
 	@echo "Building Docker image..."
 	docker-compose up --build
 
@@ -36,7 +36,7 @@ run-locally:
 tests:
 	@echo "Running tests..."
 	source ./venv/bin/activate && \
-	coverage run -m unittest && \
+	coverage run --rcfile=./.coveragerc -m unittest  && \
 	coverage html && \
 	coverage xml
 
