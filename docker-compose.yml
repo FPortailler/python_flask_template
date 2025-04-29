@@ -6,3 +6,10 @@ services:
       target: app
     ports:
       - "5001:5001"
+    networks:
+      - default
+
+
+# Network config
+networks:
+  default: { }
